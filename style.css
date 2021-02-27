@@ -10,28 +10,44 @@ nav{
 }
 #input{
     margin-top: 10%;
+    text-align: center;
+    
 }
 #url-container{
+    display: flex;
+    
     background-color: rgb(43, 55, 70);
     margin-top: 40px;
-    margin-left: 20.5%;
-    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
     width: 60%;
     height: 34px;
     border: white solid;
     border-radius: 7px;
     color: white;
+    
+    justify-content: center;
 }
 input{
-    background-color: rgba(255, 255, 255, 0);
-    margin-left: 42%;
-    height: 100%;
+    
+    background-color: transparent;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
     border: none;
     caret-color: white;
     font-size: 15px;
+    color: white;
+    text-align: center;
 }
 input:focus{
     outline: none;
+   
+}
+input:focus::placeholder{
+    color: transparent;
 }
 ::placeholder{
     
@@ -39,12 +55,12 @@ input:focus{
 }
 button{
     background-color: rgb(218, 155, 155);
+    
     color: white;
     width: 170px;
     height: 40px;
     border: none;
     border-radius: 7px;
     margin-top: 20px;
-    margin-left: 44.5%;
     font-size: 17px;
 }
