@@ -7,8 +7,10 @@ html, body{
 
 nav{
     background-color: rgb(218, 155, 155);
-    
-    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
     
 }
 #input{
@@ -73,9 +75,9 @@ button{
     align-items: center;
     margin-top: 20px;
 }
-img{
-    width: 70%;
-    height: 40%;
+img.searched-image{
+    width: 60%;
+    height: 30%;
     
 }
 #title-container{
