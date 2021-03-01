@@ -14,7 +14,7 @@ btn.addEventListener('click', () => {
         const image = document.createElement('img');
         image.src = url;
         image.className= 'searched-image';
-        const ytApiKey = process.env.API_KEY;//bonk
+        const ytApiKey = env.API_KEY;//bonk
         fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + videoId + "&key=" + ytApiKey)
         .then(res => res.json())
         .then(data => {
