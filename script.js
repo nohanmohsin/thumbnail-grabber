@@ -14,19 +14,9 @@ btn.addEventListener('click', () => {
         const image = document.createElement('img');
         image.src = url;
         image.className= 'searched-image';
+        document.getElementById('input').style.display= 'none';
+        document.getElementById('img').appendChild(image);
         const ytApiKey = env.API_KEY;//bonk
-        fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + videoId + "&key=" + ytApiKey)
-        .then(res => res.json())
-        .then(data => {
-            title = data.items[0].snippet.title
-            const nameOfVid = document.getElementById("title");
-            nameOfVid.innerText= title;
-            if(title.length > 0){
-                document.getElementById('input').style.display= 'none';
-                document.getElementById('img').appendChild(image);
-            }
-            
-        });
         
     }
 
