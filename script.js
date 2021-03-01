@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const btn = document.getElementById('submit');
 let title = 'yeet';
 btn.addEventListener('click', () => {
@@ -12,7 +14,7 @@ btn.addEventListener('click', () => {
         const image = document.createElement('img');
         image.src = url;
         image.className= 'searched-image';
-        const ytApiKey = 'if you trynna see if I put this here then bonk...if not still bonk';
+        const ytApiKey = process.env.API_KEY;//bonk
         fetch("https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" + videoId + "&key=" + ytApiKey)
         .then(res => res.json())
         .then(data => {
